@@ -1,0 +1,51 @@
+﻿@page "/"
+@inject IJSRuntime JsRuntime
+
+<div class="container">
+    <div class="auto-title">Auto</div>
+    <div class="auto-upper-cargo">
+        Upper Cargo
+    </div>
+    <div class="auto-lower-cargo">
+        Lower Cargo
+    </div>
+    <div class="tarmac">
+        Tarmac
+    </div>
+    <div class="teleop-points maincol">
+        Teleop Points
+    </div>
+    <div class="tele-upper-cargo">
+        Upper Cargo
+    </div>
+    <div class="tele-lower-cargo">
+        Lower Cargo
+    </div>
+    <div class="hangar-rung">
+        Hangar Rung
+    </div>
+    <div class="teleop-bonus maincol">
+        Teleop Bonus
+    </div>
+    <div class="cargo-bonus">
+        Cargo Bonus
+    </div>
+    <div class="hangar-bonus">
+        Cargo Bonus
+    </div>
+    <div class="info">
+        Info
+    </div>
+</div>
+
+@code
+{
+    private string? GreetInput { get; set; }
+
+    private string? GreetMsg { get; set; }
+
+    private async Task GreetAsync()
+    {
+        GreetMsg = await JsRuntime.InvokeAsync<string>("__TAURI__.tauri.invoke", "greet", new { name = GreetInput });
+    }
+}
