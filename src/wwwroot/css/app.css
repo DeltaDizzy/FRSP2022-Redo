@@ -17,6 +17,33 @@
   -webkit-text-size-adjust: 100%;
 }
 
+.counter-container {
+  display: grid;
+  grid-template-areas: 
+    "header-left header-center header-right"
+    "downbutton  count         upbutton";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.title {
+  grid-area: header-left;
+  grid-column: 1 / 4;
+}
+
+.decrement {
+  grid-area: downbutton;
+}
+
+.count {
+  grid-area: count;
+  margin: auto;
+}
+
+.increment {
+  grid-area: upbutton;
+}
+
 .container {
   display: grid;
   grid-template-areas: 
@@ -25,7 +52,8 @@
     "autolower  telelower hangarbonus"
     "tarmac     rung      notes";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 2fr 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+  column-gap: 5%;
   align-items: center;
   justify-items: center;
 }

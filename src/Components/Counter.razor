@@ -1,0 +1,17 @@
+﻿<div class="counter-container">
+    <h3 class="title">@Title</h3>
+    <button @onclick=Decrement class="decrement">-</button>
+    <div class=count>@count</div>
+    <button class="increment" @onclick=Increment>+</button>
+</div>
+
+@code {
+    [Parameter]
+    public string Title {get; set;} = "";
+
+    public int count = 0;
+
+    public void Increment() => count++;
+
+    public void Decrement() => count--;
+}

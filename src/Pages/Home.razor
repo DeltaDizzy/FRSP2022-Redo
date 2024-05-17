@@ -1,13 +1,14 @@
 ﻿@page "/"
 @inject IJSRuntime JsRuntime
+@using FRSP2022Redo.Components
 
 <div class="container">
     <div class="auto-title title">Auto</div>
     <div class="auto-upper-cargo main">
-        Upper Cargo
+        <Counter Title="Upper Cargo"/>
     </div>
     <div class="auto-lower-cargo main">
-        Lower Cargo
+        <Counter Title="Lower Cargo"/>
     </div>
     <div class="tarmac main">
         Tarmac
@@ -16,10 +17,10 @@
         Teleop Points
     </div>
     <div class="tele-upper-cargo main">
-        Upper Cargo
+        <Counter Title="Upper Cargo"/>
     </div>
     <div class="tele-lower-cargo main">
-        Lower Cargo
+       <Counter Title="Lower Cargo"/>
     </div>
     <div class="hangar-rung man">
         Hangar Rung
