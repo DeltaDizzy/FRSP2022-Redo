@@ -25,9 +25,13 @@
     "autolower  telelower hangarbonus"
     "tarmac     rung      notes";
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: max-content;
+  grid-template-rows: 2fr 1fr 1fr 1fr;
   align-items: center;
   justify-items: center;
+}
+
+.title {
+  font-size: 20pt;
 }
 
 .auto-title {
@@ -40,7 +44,6 @@
 
 .auto-lower-cargo {
   grid-area: autolower;
-  font-size: 18pt;
 }
 
 .tarmac {
